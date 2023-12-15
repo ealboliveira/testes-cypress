@@ -35,11 +35,14 @@ describe('Teste de Funcionalidades da Agenda de Contatos', () => {
             .click();
     });
 
-    it('Deve remover um contato específico', () => {
-        cy.get(':nth-child(10) > .sc-gueYoa > .delete')
+    it('Deve remover o primeiro contato da lista', () => {
+        cy.get('.contato', { timeout: 10000 }).should('exist');
+    
+        cy.get('.sc-gueYoa .delete', { timeout: 10000 })
+            .first() 
             .should('exist')
             .should('be.visible')
             .click();
-        });
-
+    });
+    
 });
