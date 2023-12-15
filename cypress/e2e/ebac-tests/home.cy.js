@@ -35,7 +35,7 @@ describe('Teste de Funcionalidades da Agenda de Contatos', () => {
             .click();
     });
 
-    it('Deve remover o primeiro contato da lista', () => {
+    it('Deve remover o primeiro  contato da lista', () => {
         cy.get('.contato', { timeout: 10000 }).should('exist');
     
         cy.get('.sc-gueYoa .delete', { timeout: 10000 })
